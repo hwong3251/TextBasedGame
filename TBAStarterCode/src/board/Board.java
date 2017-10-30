@@ -5,32 +5,32 @@ import rooms.Room;
 public class Board {
 
 
-    private Room[][] schoolMap;
+    private Room[][] Map;
 
 
 
-    public Board(Room[][] schoolMap)
+    public Board(Room[][] Map)
     {
-        this.schoolMap = schoolMap;
+        this.Map = Map;
     }
 
     public void printMap()
     {
-        for(Room[] row : schoolMap)
+        for(Room[] row : Map)
         {
-            for (Room room : row)
+            for (Room column : row)
             {
-                room.print();
+                column.print();
             }
             System.out.println();
         }
     }
     public Room[][] getSchoolMap() {
-        return schoolMap;
+        return Map;
     }
 
-    public void setSchoolMap(Room[][] schoolMap) {
-        this.schoolMap = schoolMap;
+    public void setSchoolMap(Room[][] Map) {
+        this.Map = Map;
     }
 
 

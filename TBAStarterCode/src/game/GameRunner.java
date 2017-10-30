@@ -1,10 +1,11 @@
 package game;
 
-import items.Item;
-import rooms.*;
 import people.Person;
+import rooms.Room;
 
 import java.util.Scanner;
+
+import utilities.Utilities;
 
 public class GameRunner {
 
@@ -16,39 +17,17 @@ public class GameRunner {
         	Room[] row = map[j];
             for (int i = 0; i<row.length;i++)
             {
-                boolean[] doors = {true,true,true,true};
                 Person[] people = {};
-                Item[] items = {};
-
-                row[i] = new Hallway(doors, people, items, i, j);
             }
 
         }
-
-        School tech = new School(map);
-
-
         boolean gameOn = true;
-        Person player1 = Utilities.createPerson();
-        Scanner in = new Scanner(System.in);
+        Person player1 = Person.createPerson();
+        Scanner in= new Scanner(System.in);
         while(gameOn)
         {
-            System.out.println("Welcome to the Halls of Tech, " + player1.getFirstName());
-            map[0][0].addOccupant(player1);
-
-            tech.printMap();
-            player1.printRoom();
-            String move = player1.chooseMove();
-            Utilities.movePlayer(tech, player1,move);
-            //gameOn = false;
-            
-
-
-
-
-
-
-
+            System.out.println("Welcome to the Halls of Tech, " + Person.getFirstName());
+            gameOn = false;
         }
 		in.close();
     }
