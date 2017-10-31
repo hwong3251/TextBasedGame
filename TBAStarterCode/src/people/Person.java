@@ -1,9 +1,11 @@
 package people;
 import utilities.Utilities;
 
-public class Person {
+public class Person{
+	
 	private static String name;
 	private static int age;
+	
 	public Person(String name,int age)
 	{
 		Person.name = name;

@@ -5,16 +5,17 @@ import rooms.Room;
 
 import java.util.Scanner;
 
+import board.Board;
 import utilities.Utilities;
 
 public class GameRunner {
 
     public static void main (String[] args)
     {
-        Room[][] map = new Room[5][5];
-        for (int j = 0; j<map.length; j++)
+        Room[][] newMap = new Room[5][5];
+        for (int j = 0; j<newMap.length; j++)
         {
-        	Room[] row = map[j];
+        	Room[] row = newMap[j];
             for (int i = 0; i<row.length;i++)
             {
                 Person[] people = {};

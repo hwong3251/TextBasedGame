@@ -13,7 +13,7 @@ public class Utilities {
 		String intString = getInput();
 		boolean isInt = false;
 		int value = 0;
-		if(isInt == false)
+		while(isInt == false)
 		{
 			try{
 					value = Integer.parseInt(intString);

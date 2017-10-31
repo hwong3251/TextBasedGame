@@ -25,11 +25,11 @@ public class Board {
             System.out.println();
         }
     }
-    public Room[][] getSchoolMap() {
+    public Room[][] getMap() {
         return Map;
     }
 
-    public void setSchoolMap(Room[][] Map) {
+    public void setMap(Room[][] Map) {
         this.Map = Map;
     }
 
